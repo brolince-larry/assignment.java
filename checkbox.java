@@ -1,7 +1,7 @@
 import java.awt.*;
-
+//create class lan
 class Lan {
-
+//create a constructor
     Lan() {
         Frame f = new Frame();
 
