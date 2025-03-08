@@ -14,7 +14,7 @@ public class WelcomePage {
         welcomeLabel.setText( "hello " + userID);
 
         frame.add(welcomeLabel);
-
+                                                                                                                                                                                                 k
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420,420);
         frame.setLayout(null);

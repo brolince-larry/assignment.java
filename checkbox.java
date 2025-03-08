@@ -15,7 +15,7 @@ class Lan {
         c2.setBackground(Color.PINK); // Set background color for the checkbox
         f.add(c2);
 
-        Checkbox c3 = new Checkbox("English");
+        Checkbox c3 = new Checkbox("English");//create checkbox
         c3.setBounds(100, 150, 100, 30);
         c3.setBackground(Color.CYAN); // Set background color for the checkbox
         f.add(c3);
