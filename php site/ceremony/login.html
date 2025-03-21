@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h2 class="logo">parzon</h2>
+    <div class="main">
+        <div class="navbar">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="service.html"><i class="fas fa-cogs"></i> Service</a></li>
+                <li><a href="design.html"><i class="fas fa-paint-brush"></i> Design</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+            </ul>
+            <div class="srch">
+                <input type="text" id="search" placeholder="Search here">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <!-- Sign In and Sign Up Forms -->
+        <section class="forms">
+           
+            
+
+            <!-- Sign Up Form (Initially visible) -->
+            <form id="signUpForm" action="/submit-signup" method="post">
+                <h3>Sign Up</h3>
+                <label for="first-name">Enter Your First Name</label><br>
+                <input type="text" id="first-name" name="first-name" placeholder="Type here" required><br>
+                
+                <label for="last-name">Enter Your Last Name</label><br>
+                <input type="text" id="last-name" name="last-name" placeholder="Type here" required><br>
+                
+                <label for="email">Enter Your Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Type here" required><br>
+                
+                <label for="password">Enter Your Password</label><br>
+                <input type="password" id="password" name="password" placeholder="Type here" required><br>
+                have an account ?<button id="signInBtn" onclick="showSignIn()">Sign In</button>
+                
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Sign In Form (Initially hidden) -->
+            <form id="signInForm" action="/submit-login" method="post" style="display: none;">
+                <h3>Sign In</h3>
+                <label for="login-email">Enter Your Email</label><br>
+                <input type="email" id="login-email" name="login-email" placeholder="Type here" required><br>
+                
+                <label for="login-password">Enter Your Password</label><br>
+                <input type="password" id="login-password" name="login-password" placeholder="Type here" required><br>
+                don't have an account... <button id="signUpBtn" onclick="showSignUp()">Sign Up</button>
+                
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <div class="icons">
+            <!-- Social Media or other icons can go here -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle between Sign Up and Sign In forms
+        function showSignUp() {
+            document.getElementById('signUpForm').style.display = 'block';
+            document.getElementById('signInForm').style.display = 'none';
+            document.getElementById('signUpBtn').classList.add('active');
+            document.getElementById('signInBtn').classList.remove('active');
+        }
+
+        function showSignIn() {
+            document.getElementById('signInForm').style.display = 'block';
+            document.getElementById('signUpForm').style.display = 'none';
+            document.getElementById('signInBtn').classList.add('active');
+            document.getElementById('signUpBtn').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
